@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="images/logo.png" alt="Gmail Quote Cleaner Logo" width="150">
+</p>
+
 # Gmail Quote Cleaner (with exceptions)
 
 An open-source Chrome extension that automatically removes quoted text when you reply to emails in Gmail. Unlike other cleaners, this extension allows you to maintain a **whitelist (exceptions list)** of specific senders. If you reply to a sender on your list, the original quoted text is preserved.
