@@ -1,0 +1,11 @@
+{
+  "extName": { "message": "Gmail Quote Cleaner (with exceptions)" },
+  "extDesc": { "message": "Removes quoted text automatically when replying in Gmail, except for senders you choose to exclude." },
+  "popupTitle": { "message": "Quote Exceptions List" },
+  "popupDesc": { "message": "Replies to emails from the following addresses will <strong>not</strong> have their quotes removed:" },
+  "oneAddressPerLine": { "message": "One address per line" },
+  "addressSingular": { "message": "address" },
+  "addressPlural": { "message": "addresses" },
+  "saveBtn": { "message": "Save Settings" },
+  "successMsg": { "message": "✓ Changes saved successfully!" }
+}

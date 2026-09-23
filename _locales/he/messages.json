@@ -1,0 +1,11 @@
+{
+  "extName": { "message": "Gmail Quote Cleaner (עם החרגות)" },
+  "extDesc": { "message": "מסיר אוטומטית ציטוטים במענה למיילים, למעט שולחים שהחרגת." },
+  "popupTitle": { "message": "רשימת החרגות מציטוט" },
+  "popupDesc": { "message": "תגובות למיילים שמתקבלים מהכתובות הבאות <strong>לא יימחקו</strong> ויישמרו עם הציטוט המקורי:" },
+  "oneAddressPerLine": { "message": "כתובת אחת בכל שורה" },
+  "addressSingular": { "message": "כתובת" },
+  "addressPlural": { "message": "כתובות" },
+  "saveBtn": { "message": "שמור הגדרות" },
+  "successMsg": { "message": "✓ השינויים נשמרו בהצלחה!" }
+}

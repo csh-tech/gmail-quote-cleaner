@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Gmail Quote Cleaner</title>
+  <style>
+    :root {
+      --primary: #1a73e8;
+      --primary-hover: #1557b0;
+      --bg-color: #ffffff;
+      --surface: #f8fafd;
+      --border: #dadce0;
+      --text: #202124;
+      --text-secondary: #5f6368;
+      --success: #137333;
+      --success-bg: #e6f4ea;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      width: 320px;
+      padding: 16px;
+      background: var(--bg-color);
+      color: var(--text);
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .icon-wrapper {
+      background: #e8f0fe;
+      border-radius: 8px;
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon-wrapper svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--primary);
+    }
+
+    h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 1.4;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+
+    .input-wrapper {
+      position: relative;
+      margin-bottom: 12px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 130px;
+      padding: 10px;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--surface);
+      color: var(--text);
+      resize: vertical;
+      outline: none;
+      transition: all 0.2s ease;
+      direction: ltr;
+      text-align: left;
+    }
+
+    textarea:focus {
+      border-color: var(--primary);
+      background: #ffffff;
+      box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+    }
+
+    .counter {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: var(--text-secondary);
+      margin-top: 4px;
+    }
+
+    button {
+      width: 100%;
+      padding: 9px 16px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: background 0.2s, transform 0.05s;
+    }
+
+    button:hover {
+      background: var(--primary-hover);
+    }
+
+    button:active {
+      transform: scale(0.99);
+    }
+
+    #status {
+      display: none;
+      margin-top: 10px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      background: var(--success-bg);
+      color: var(--success);
+      font-size: 12px;
+      font-weight: 500;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <div class="icon-wrapper">
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z" />
+      </svg>
+    </div>
+    <h3 data-i18n="popupTitle"></h3>
+  </div>
+
+  <p data-i18n="popupDesc"></p>
+
+  <div class="input-wrapper">
+    <textarea id="list" placeholder="boss@company.com&#10;client@domain.com" spellcheck="false"></textarea>
+    <div class="counter">
+      <span data-i18n="oneAddressPerLine"></span>
+      <span id="count"></span>
+    </div>
+  </div>
+
+  <button id="save">
+    <span data-i18n="saveBtn"></span>
+  </button>
+
+  <div id="status" data-i18n="successMsg"></div>
+
+
+  <script src="popup.js"></script>
+</body>
+
+</html>

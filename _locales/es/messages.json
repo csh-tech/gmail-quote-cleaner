@@ -1,0 +1,11 @@
+{
+  "extName": { "message": "Gmail Quote Cleaner (con excepciones)" },
+  "extDesc": { "message": "Elimina el texto citado automáticamente al responder en Gmail, excepto para los remitentes que elijas excluir." },
+  "popupTitle": { "message": "Lista de excepciones" },
+  "popupDesc": { "message": "Las respuestas a correos de las siguientes direcciones <strong>no</strong> eliminarán sus citas:" },
+  "oneAddressPerLine": { "message": "Una dirección por línea" },
+  "addressSingular": { "message": "dirección" },
+  "addressPlural": { "message": "direcciones" },
+  "saveBtn": { "message": "Guardar configuración" },
+  "successMsg": { "message": "✓ ¡Cambios guardados con éxito!" }
+}
